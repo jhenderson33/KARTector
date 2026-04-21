@@ -4,3 +4,5 @@ ipywidgets>=8.0.0
 jupyterlab>=4.0.0
 ipython>=8.0.0
 Pillow>=10.0.0
+moviepy>=1.0.0
+imageio-ffmpeg>=0.4.0

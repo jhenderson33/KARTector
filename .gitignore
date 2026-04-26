@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# YOLOv8 / Ultralytics
+runs/
+yolov8*.pt
+*.weights
+*.pt
+
+# Label Studio
+ml_backend/ml_backend_data/
+*.db
+*.sqlite3
+
+# Video files (large)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Image datasets (can be large)
+data/processed/frames/
+data/yolo_dataset/images/
+data/yolo_dataset/labels/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Model checkpoints (keep only best.pt in git)
+runs/**/weights/*.pt
+!runs/**/weights/best.pt
+
+# Keep directory structure but ignore contents
+data/processed/labelstudiochunks/*.mp4
+data/processed/labelstudiochunks/*.mov
+data/videos/*.mp4
+data/videos/*.mov
+

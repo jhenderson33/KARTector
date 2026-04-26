@@ -1,0 +1,7 @@
+label-studio-ml
+ultralytics
+Pillow
+requests
+numpy
+redis
+rq

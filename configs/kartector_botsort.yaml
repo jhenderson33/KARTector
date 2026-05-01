@@ -1,0 +1,38 @@
+# KARTector — Custom BoT-SORT config
+# Tuned to mirror the post-processing logic in the ML backend:
+#   MAX_DISAPPEAR_FRAMES=5  → track_buffer ~5-10 (short clips, don't linger)
+#   AUTO_MERGE_TRACKS       → handled in post-processing (not a tracker knob)
+#   CROSS_CLASS_NMS         → handled in post-processing (not a tracker knob)
+#   CONF_THRESH=0.20        → track_high_thresh / new_track_thresh set close to detection conf
+#
+# Usage:
+#   model.track(..., tracker="configs/kartector_botsort.yaml")
+#   On a remote cluster, upload this file and reference via absolute path:
+#   model.track(..., tracker="/home/user/KARTector/configs/kartector_botsort.yaml")
+
+tracker_type: botsort
+
+# Detection association thresholds
+track_high_thresh: 0.25   # keep consistent with CONF_THRESH=0.20 in backend
+track_low_thresh:  0.10   # allow low-score recovery in 2nd pass
+new_track_thresh:  0.25   # start new track (same as track_high_thresh)
+match_thresh:      0.80   # IoU/cost similarity; higher = stricter identity
+
+# Track lifetime
+# backend: MAX_DISAPPEAR_FRAMES=5, FRAME_STRIDE=1 → buffer ~5 frames
+# backend: AUTO_MERGE_TRACKS merges gaps up to MERGE_TIME_THRESHOLD=30 frames
+# Keep buffer short so we get clean track segments that the merge logic can stitch;
+# set higher (e.g. 30) if you want the tracker itself to bridge occlusions.
+track_buffer: 10
+
+fuse_score: True   # fuse detection score with IoU for better weak-detection handling
+
+# Global motion compensation — useful for moving-camera kart footage
+gmc_method: sparseOptFlow
+
+# ReID settings (disabled to match backend default; enable if you add a ReID model)
+proximity_thresh:   0.5
+appearance_thresh:  0.85
+with_reid: False
+model: auto
+

@@ -1,0 +1,8 @@
+{
+  "tracker": "bytetrack",
+  "tracker_yaml": "configs/kartector_bytetrack_best.yaml",
+  "conf": 0.4,
+  "post_process": true,
+  "max_gap": 90,
+  "max_dist_pct": 70.0
+}

@@ -1,0 +1,14 @@
+{
+  "tracker": "botsort",
+  "tracker_yaml": "configs/kartector_botsort_reentry.yaml",
+  "conf": 0.4,
+  "post_process": true,
+  "max_gap": 90,
+  "max_dist_pct": 50.0,
+  "reid_option": "B",
+  "reid_b_params": {
+    "track_buffer": 20,
+    "match_thresh": 0.99,
+    "appearance_thresh": 0.4
+  }
+}

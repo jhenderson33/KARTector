@@ -28,10 +28,11 @@ torchvision>=0.15.0
 
 # ── Detection & tracking ──────────────────────────────────────────────────────
 ultralytics>=8.3.0           # YOLOv8, YOLO11, RT-DETR, ByteTrack, BoTSORT
-boxmot>=10.0.0               # 05_track_rtdetr.ipynb — additional tracker backends
+boxmot>=10.0.0               # notebooks 04–08 — ReID-based BotSort via boxmot
 
 # ── Label Studio integration ──────────────────────────────────────────────────
 label-studio-sdk>=0.0.30     # labelstudio_to_yolo.ipynb, ml_backend
 
 # ── Config / serialisation ────────────────────────────────────────────────────
 pyyaml>=6.0
+jinja2>=3.1.0                # required by pandas .style accessor (styled DataFrames)

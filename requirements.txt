@@ -4,20 +4,16 @@ pandas>=2.0.0
 matplotlib>=3.7.0
 seaborn>=0.13.0
 Pillow>=10.0.0
-scipy>=1.10.0                # used in various notebooks for stats / interpolation
-scikit-learn>=1.3.0          # label encoding, metrics utilities
 
 # ── Jupyter ───────────────────────────────────────────────────────────────────
 jupyterlab>=4.0.0
 ipython>=8.0.0
 ipywidgets>=8.0.0
-ipympl>=0.9.0                # interactive matplotlib in JupyterLab
 tqdm>=4.65.0
 
 # ── Video / media ─────────────────────────────────────────────────────────────
 opencv-python>=4.8.0
 moviepy>=1.0.3               # video_processing_pipeline.ipynb
-imageio-ffmpeg>=0.4.0        # ffmpeg backend for imageio / moviepy
 requests>=2.31.0             # downloading assets / Label Studio API calls
 
 # ── PyTorch (CPU/GPU/MPS — install the right variant for your platform) ───────
@@ -29,6 +25,7 @@ torchvision>=0.15.0
 # ── Detection & tracking ──────────────────────────────────────────────────────
 ultralytics>=8.3.0           # YOLOv8, YOLO11, RT-DETR, ByteTrack, BoTSORT
 boxmot>=10.0.0               # notebooks 04–08 — ReID-based BotSort via boxmot
+gdown>=4.7.0               # downloading pretrained weights from Google Drive (e.g. BoTSORT ReID model)
 
 # ── Label Studio integration ──────────────────────────────────────────────────
 label-studio-sdk>=0.0.30     # labelstudio_to_yolo.ipynb, ml_backend
